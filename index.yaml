@@ -1,0 +1,94 @@
+apiVersion: v1
+entries:
+  grafana:
+  - apiVersion: v1
+    appVersion: 7.0.3
+    created: "2020-07-14T19:00:08.457584+07:00"
+    description: The leading tool for querying and visualizing time series and metrics.
+    digest: 105beb4cd110d860962e1b6c4d26522e4bfd2e14826e7201a2c992b55195643f
+    home: https://grafana.net
+    icon: https://raw.githubusercontent.com/grafana/grafana/master/public/img/logo_transparent_400x.png
+    kubeVersion: ^1.8.0-0
+    maintainers:
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    - email: rluckie@cisco.com
+      name: rtluckie
+    - email: maor.friedman@redhat.com
+      name: maorfr
+    name: grafana
+    sources:
+    - https://github.com/grafana/grafana
+    urls:
+    - grafana-5.3.5.tgz
+    version: 5.3.5
+  kube-state-metrics:
+  - apiVersion: v1
+    appVersion: 1.9.7
+    created: "2020-07-14T19:00:08.458458+07:00"
+    description: Install kube-state-metrics to generate and expose cluster-level metrics
+    digest: 182bb454fa2e5791e2f588ba048c5d18a170849bf3741ed4616e745d5b50188d
+    home: https://github.com/kubernetes/kube-state-metrics/
+    keywords:
+    - metric
+    - monitoring
+    - prometheus
+    - kubernetes
+    maintainers:
+    - email: jose@armesto.net
+      name: fiunchinho
+    - email: tariq.ibrahim@mulesoft.com
+      name: tariq1890
+    - email: manuel@rueg.eu
+      name: mrueg
+    name: kube-state-metrics
+    sources:
+    - https://github.com/kubernetes/kube-state-metrics/
+    urls:
+    - kube-state-metrics-2.8.11.tgz
+    version: 2.8.11
+  nginx-ingress:
+  - apiVersion: v1
+    appVersion: 0.32.0
+    created: "2020-07-14T19:00:08.463059+07:00"
+    description: An nginx Ingress controller that uses ConfigMap to store the nginx
+      configuration.
+    digest: a76ebb332554a2908c8221524bbdfe151c61ad6c5f792311abef74effa2dea20
+    home: https://github.com/kubernetes/ingress-nginx
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/500px-Nginx_logo.svg.png
+    keywords:
+    - ingress
+    - nginx
+    kubeVersion: '>=1.10.0-0'
+    maintainers:
+    - name: ChiefAlexander
+    - email: Trevor.G.Wood@gmail.com
+      name: taharah
+    name: nginx-ingress
+    sources:
+    - https://github.com/kubernetes/ingress-nginx
+    urls:
+    - nginx-ingress-1.40.3.tgz
+    version: 1.40.3
+  prometheus-node-exporter:
+  - apiVersion: v1
+    appVersion: 1.0.0
+    created: "2020-07-14T19:00:08.464163+07:00"
+    description: A Helm chart for prometheus node-exporter
+    digest: cd8476b040ee61411f1303dcce020c8ff6f4b5456e885dc0499bf52f233ae789
+    home: https://github.com/prometheus/node_exporter/
+    keywords:
+    - node-exporter
+    - prometheus
+    - exporter
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - name: vsliouniaev
+    name: prometheus-node-exporter
+    sources:
+    - https://github.com/prometheus/node_exporter/
+    urls:
+    - prometheus-node-exporter-1.11.0.tgz
+    version: 1.11.0
+generated: "2020-07-14T19:00:08.454821+07:00"
