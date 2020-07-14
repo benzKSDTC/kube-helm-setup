@@ -20,7 +20,6 @@ priorityClassName: ""
 prometheus:
   url: http://prometheus.default.svc
   port: 9090
-  path: ""
 
 replicas: 1
 
@@ -44,17 +43,22 @@ resources: {}
   #   memory: 128Mi
 
 rules:
-  default: true
-  custom: []
-# - seriesQuery: '{__name__=~"^some_metric_count$"}'
-#   resources:
-#     template: <<.Resource>>
-#   name:
-#     matches: ""
-#     as: "my_custom_metric"
-#   metricsQuery: sum(<<.Series>>{<<.LabelMatchers>>}) by (<<.GroupBy>>)
-  # Mounts a configMap with pre-generated rules for use. Overrides the
-  # default, custom, external and resource entries
+  custom: 
+  - seriesQuery: '{__name__=~"^http_.*_count",kubernetes_namespace!="",kubernetes_pod_name!=""}'
+    resources:
+      overrides:
+        kubernetes_pod_name: {resource: "pod"}
+        kubernetes_namespace: {resource: "namespace"}
+    metricsQuery: 'sum(irate(<<.Series>>{<<.LabelMatchers>>}[2m])) by (<<.GroupBy>>)'
+  - seriesQuery: 'nginx_ingress_controller_requests{ingress!="",exported_namespace!=""}'
+    resources:
+      overrides:
+        exported_namespace: {resource: "namespace"}
+        ingress: {resource: "ingress"}
+    name:
+      matches: "^(.*)_controller_requests"
+      as: "${1}_request_per_second"
+    metricsQuery: 'sum(irate(<<.Series>>{<<.LabelMatchers>>}[2m])) by (<<.GroupBy>>)'
   existing:
   external: []
 # - seriesQuery: '{__name__=~"^some_metric_count$"}'
