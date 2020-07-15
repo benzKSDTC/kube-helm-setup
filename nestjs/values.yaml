@@ -1,0 +1,51 @@
+# Default values for nestjs.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 2
+
+app:
+  name: nestjs
+  env: development
+  host: chart-example.local
+  cloudSqlSidecar:
+    enabled: false
+    instances: wise-platform:asia-southeast1:wisekingdom-instance=tcp:3306
+    serviceAccountSecret: xxxx
+  
+image: nginx
+
+service:
+  type: ClusterIP
+  port: 80
+  noneclusterip: true
+
+ingress:
+  enabled: true
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+  hosts:
+    - host: chart-example.local
+      path: /?(.*)
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
+resources:
+  requests:
+    memory: "128Mi"
+    cpu: "30m"
+  limits:
+    memory: "1024Mi"
+    cpu: "800m"
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 5
+  targetNginxReqPerSec: 200
+  # targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80
