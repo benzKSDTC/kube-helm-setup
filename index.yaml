@@ -3,9 +3,9 @@ entries:
   nestjs:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-07-15T14:52:38.066299+07:00"
+    created: "2020-07-15T17:50:08.326573+07:00"
     description: A Helm chart for Kubernetes
-    digest: f9fb6501f2a5d89fab9ee2fd5ec493b9c0a00fdfa4d1f226580abbe57779cf6a
+    digest: 536c8e23747239c4568dfc84ff5eeb5d51c581eb31b1ee11878b30863ffa5a09
     name: nestjs
     type: application
     urls:
@@ -14,9 +14,9 @@ entries:
   nextjs:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-07-15T14:52:38.066908+07:00"
+    created: "2020-07-15T17:50:08.326949+07:00"
     description: A Helm chart for Kubernetes
-    digest: dadc63edf8cc42bf9f6f47d34963a732889d688f24161884be33026d63e3ad21
+    digest: edff9faf034470ba600ef4420e9b661b585dff7abce5d5c7af98735439476d32
     name: nextjs
     type: application
     urls:
@@ -25,7 +25,7 @@ entries:
   nginx-ingress:
   - apiVersion: v1
     appVersion: 0.32.0
-    created: "2020-07-15T14:52:38.073441+07:00"
+    created: "2020-07-15T17:50:08.328873+07:00"
     description: An nginx Ingress controller that uses ConfigMap to store the nginx
       configuration.
     digest: a76ebb332554a2908c8221524bbdfe151c61ad6c5f792311abef74effa2dea20
@@ -48,7 +48,7 @@ entries:
   prometheus-adapter:
   - apiVersion: v1
     appVersion: v0.6.0
-    created: "2020-07-15T14:52:38.075365+07:00"
+    created: "2020-07-15T17:50:08.33164+07:00"
     description: A Helm chart for k8s prometheus adapter
     digest: be63c4daa32c3586c84f983ffebd9a34f3cf84f6c345f09ca9a65cc1545475b2
     home: https://github.com/DirectXMan12/k8s-prometheus-adapter
@@ -73,7 +73,7 @@ entries:
   prometheus-operator:
   - apiVersion: v1
     appVersion: 0.38.1
-    created: "2020-07-15T14:52:38.100016+07:00"
+    created: "2020-07-15T17:50:08.355807+07:00"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
@@ -108,4 +108,4 @@ entries:
     urls:
     - prometheus-operator-8.16.1.tgz
     version: 8.16.1
-generated: "2020-07-15T14:52:38.064382+07:00"
+generated: "2020-07-15T17:50:08.325983+07:00"

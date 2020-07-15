@@ -1,4 +1,5 @@
 {{- if .Values.ingress.enabled }}
+{{ $appName := .Values.app.name }}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -29,7 +30,7 @@ spec:
         paths:
           - path: {{ .path | quote }}
             backend:
-              serviceName: {{ .Values.app.name }}
+              serviceName: {{ $appName }}
               servicePort: 80
     {{- end }}
 {{- end }}

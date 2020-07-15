@@ -10,7 +10,7 @@ spec:
 {{- if .Values.service.noneclusterip }}
   clusterIP: None
 {{- end }}
-  type: "{{ .Values.controller.service.type }}"
+  type: {{ .Values.service.type }}
   ports:
   - name: http
     port: 80
