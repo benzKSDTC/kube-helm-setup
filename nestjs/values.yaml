@@ -10,7 +10,7 @@ app:
   host: chart-example.local
   cloudSqlSidecar:
     enabled: false
-    instances: wise-platform:asia-southeast1:wisekingdom-instance=tcp:3306
+    instances: instancesId:port
     serviceAccountSecret: xxxx
   
 image: nginx
