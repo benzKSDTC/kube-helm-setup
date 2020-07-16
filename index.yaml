@@ -3,7 +3,7 @@ entries:
   nestjs:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-07-15T17:50:08.326573+07:00"
+    created: "2020-07-16T11:26:47.540443+07:00"
     description: A Helm chart for Kubernetes
     digest: 536c8e23747239c4568dfc84ff5eeb5d51c581eb31b1ee11878b30863ffa5a09
     name: nestjs
@@ -14,7 +14,7 @@ entries:
   nextjs:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-07-15T17:50:08.326949+07:00"
+    created: "2020-07-16T11:26:47.54173+07:00"
     description: A Helm chart for Kubernetes
     digest: edff9faf034470ba600ef4420e9b661b585dff7abce5d5c7af98735439476d32
     name: nextjs
@@ -25,10 +25,10 @@ entries:
   nginx-ingress:
   - apiVersion: v1
     appVersion: 0.32.0
-    created: "2020-07-15T17:50:08.328873+07:00"
+    created: "2020-07-16T11:26:47.550703+07:00"
     description: An nginx Ingress controller that uses ConfigMap to store the nginx
       configuration.
-    digest: a76ebb332554a2908c8221524bbdfe151c61ad6c5f792311abef74effa2dea20
+    digest: 4b9c8c1fd5e4e351c506910f32c48f804d45fedabd1de6cd20e0551992e7e650
     home: https://github.com/kubernetes/ingress-nginx
     icon: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/500px-Nginx_logo.svg.png
     keywords:
@@ -48,9 +48,9 @@ entries:
   prometheus-adapter:
   - apiVersion: v1
     appVersion: v0.6.0
-    created: "2020-07-15T17:50:08.33164+07:00"
+    created: "2020-07-16T11:26:47.553846+07:00"
     description: A Helm chart for k8s prometheus adapter
-    digest: be63c4daa32c3586c84f983ffebd9a34f3cf84f6c345f09ca9a65cc1545475b2
+    digest: 99b5b752023ab2053f028bc115480736ce9d50c5a8bc2b8c54a56e485e463b77
     home: https://github.com/DirectXMan12/k8s-prometheus-adapter
     keywords:
     - hpa
@@ -73,23 +73,10 @@ entries:
   prometheus-operator:
   - apiVersion: v1
     appVersion: 0.38.1
-    created: "2020-07-15T17:50:08.355807+07:00"
-    dependencies:
-    - condition: kubeStateMetrics.enabled
-      name: kube-state-metrics
-      repository: https://kubernetes-charts.storage.googleapis.com/
-      version: 2.8.*
-    - condition: nodeExporter.enabled
-      name: prometheus-node-exporter
-      repository: https://kubernetes-charts.storage.googleapis.com/
-      version: 1.10.*
-    - condition: grafana.enabled
-      name: grafana
-      repository: https://kubernetes-charts.storage.googleapis.com/
-      version: 5.3.*
+    created: "2020-07-16T11:26:47.581934+07:00"
     description: Provides easy monitoring definitions for Kubernetes services, and
       deployment and management of Prometheus instances.
-    digest: 3138d3d3ad40d71bcf88db10e7a35f0d976fc8c00b208d539c85641d2a8a0357
+    digest: 7a2d2bc26a4b4e266e76d1beab296a2c0733101935edf2f3d563e2ef5bb47cc6
     home: https://github.com/coreos/prometheus-operator
     icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     keywords:
@@ -108,4 +95,4 @@ entries:
     urls:
     - prometheus-operator-8.16.1.tgz
     version: 8.16.1
-generated: "2020-07-15T17:50:08.325983+07:00"
+generated: "2020-07-16T11:26:47.539108+07:00"

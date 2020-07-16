@@ -19,3 +19,7 @@ home: https://github.com/coreos/prometheus-operator
 keywords:
 - operator
 - prometheus
+dependencies:
+  - name: prometheus-operator
+    version: "8.16.1"
+    repository: https://kubernetes-charts.storage.googleapis.com/
