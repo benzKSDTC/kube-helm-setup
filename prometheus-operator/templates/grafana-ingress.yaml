@@ -5,14 +5,14 @@ kind: Ingress
 metadata:
   name: {{ .Values.grafanaIngress.appName }}
   namespace: {{ .Values.grafanaIngress.namespaces }}
-  {{- with .Values.ingress.annotations }}
+  {{- with .Values.grafanaIngress.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
   {{- end }}
 spec:
-  {{- if .Values.ingress.tls }}
+  {{- if .Values.grafanaIngress.tls }}
   tls:
-    {{- range .Values.ingress.tls }}
+    {{- range .Values.grafanaIngress.tls }}
     - hosts:
         {{- range .hosts }}
         - {{ . | quote }}
@@ -21,7 +21,7 @@ spec:
     {{- end }}
   {{- end }}
   rules:
-    {{- range .Values.ingress.hosts }}
+    {{- range .Values.grafanaIngress.hosts }}
     - host: {{ .host | quote }}
       http:
         paths:
