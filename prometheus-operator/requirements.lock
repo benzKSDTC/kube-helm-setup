@@ -1,6 +1,9 @@
 dependencies:
-- name: prometheus-operator
+- name: prometheus
   repository: https://kubernetes-charts.storage.googleapis.com/
-  version: 8.16.1
-digest: sha256:7fb55588e8c8f0a065b8b3ae52bb273582744e05e06eb7112c9502eb905b8c6c
-generated: "2020-07-16T11:20:43.184053+07:00"
+  version: 11.7.0
+- name: grafana
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  version: 5.4.0
+digest: sha256:2812268c5aa317d95a78aedec431cdce040df35cadc61b6b7c20bfa23c8f3722
+generated: "2020-07-17T17:36:56.486778+07:00"

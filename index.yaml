@@ -3,7 +3,7 @@ entries:
   nestjs:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-07-17T14:51:39.629224+07:00"
+    created: "2020-07-17T17:37:42.912856+07:00"
     description: A Helm chart for Kubernetes
     digest: 536c8e23747239c4568dfc84ff5eeb5d51c581eb31b1ee11878b30863ffa5a09
     name: nestjs
@@ -14,7 +14,7 @@ entries:
   nextjs:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-07-17T14:51:39.630162+07:00"
+    created: "2020-07-17T17:37:42.913782+07:00"
     description: A Helm chart for Kubernetes
     digest: edff9faf034470ba600ef4420e9b661b585dff7abce5d5c7af98735439476d32
     name: nextjs
@@ -25,7 +25,7 @@ entries:
   nginx-ingress:
   - apiVersion: v1
     appVersion: 0.32.0
-    created: "2020-07-17T14:51:39.637062+07:00"
+    created: "2020-07-17T17:37:42.920135+07:00"
     description: An nginx Ingress controller that uses ConfigMap to store the nginx
       configuration.
     digest: 4b9c8c1fd5e4e351c506910f32c48f804d45fedabd1de6cd20e0551992e7e650
@@ -48,7 +48,7 @@ entries:
   prometheus-adapter:
   - apiVersion: v1
     appVersion: v0.6.0
-    created: "2020-07-17T14:51:39.639169+07:00"
+    created: "2020-07-17T17:37:42.925534+07:00"
     description: A Helm chart for k8s prometheus adapter
     digest: 99b5b752023ab2053f028bc115480736ce9d50c5a8bc2b8c54a56e485e463b77
     home: https://github.com/DirectXMan12/k8s-prometheus-adapter
@@ -72,27 +72,19 @@ entries:
     version: 2.4.0
   prometheus-operator:
   - apiVersion: v1
-    appVersion: 0.38.1
-    created: "2020-07-17T14:51:39.667178+07:00"
+    appVersion: v1.0.0
+    created: "2020-07-17T17:37:42.932399+07:00"
     description: Provides easy monitoring definitions for Kubernetes services, and
       deployment and management of Prometheus instances.
-    digest: 67723e83f2a4a55c848b56e19952ad774d7e5a4e622e02d950733a90790902b5
-    home: https://github.com/coreos/prometheus-operator
-    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    digest: 632f9287816d5dd2466368ed09e990adfac96dacd5c8d78c6e4ad544edd503d7
     keywords:
     - operator
     - prometheus
     maintainers:
-    - name: vsliouniaev
-    - name: bismarck
-    - email: gianrubio@gmail.com
-      name: gianrubio
+    - email: kritsadaksdtc@gmail.com
+      name: Kritsada Thongchai
     name: prometheus-operator
-    sources:
-    - https://github.com/coreos/kube-prometheus
-    - https://github.com/coreos/prometheus-operator
-    - https://coreos.com/operators/prometheus
     urls:
-    - prometheus-operator-8.16.1.tgz
-    version: 8.16.1
-generated: "2020-07-17T14:51:39.627798+07:00"
+    - prometheus-operator-1.0.0.tgz
+    version: 1.0.0
+generated: "2020-07-17T17:37:42.909975+07:00"
