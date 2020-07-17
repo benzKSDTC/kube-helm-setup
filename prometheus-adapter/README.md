@@ -4,7 +4,7 @@ Installs the [Prometheus Adapter](https://github.com/DirectXMan12/k8s-prometheus
 
 ## TestMetric
 ```console
-  kubectl get --raw "/apis/custom.metrics.k8s.io/v1beta1/namespaces/${namespaces}/ingress/${appName}/nginx_ingress_request_per_second"
+$ kubectl get --raw "/apis/custom.metrics.k8s.io/v1beta1/namespaces/${namespaces}/ingress/${appName}/nginx_ingress_request_per_second"
 ```
 
 ## Prerequisites
