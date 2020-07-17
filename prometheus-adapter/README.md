@@ -2,6 +2,11 @@
 
 Installs the [Prometheus Adapter](https://github.com/DirectXMan12/k8s-prometheus-adapter) for the Custom Metrics API. Custom metrics are used in Kubernetes by [Horizontal Pod Autoscalers](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) to scale workloads based upon your own metric pulled from an external metrics provider like Prometheus. This chart complements the [metrics-server](https://github.com/helm/charts/tree/master/stable/metrics-server) chart that provides resource only metrics.
 
+## TestMetric
+```console
+  kubectl get --raw "/apis/custom.metrics.k8s.io/v1beta1/namespaces/${namespaces}/ingress/${appName}/nginx_ingress_request_per_second"
+```
+
 ## Prerequisites
 
 Kubernetes 1.14+
