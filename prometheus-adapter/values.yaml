@@ -19,8 +19,8 @@ prometheus-adapter:
 
   # Url to access prometheus
   prometheus:
-    url: http://prometheus.default.svc
-    port: 9090
+    url: http://prometheus-operator-server.default.svc
+    port: 80
 
   replicas: 1
 
@@ -45,16 +45,10 @@ prometheus-adapter:
 
   rules:
     custom: 
-    - seriesQuery: '{__name__=~"^http_.*_count",kubernetes_namespace!="",kubernetes_pod_name!=""}'
+    - seriesQuery: 'nginx_ingress_controller_requests{ingress!="",namespace!=""}'
       resources:
         overrides:
-          kubernetes_pod_name: {resource: "pod"}
-          kubernetes_namespace: {resource: "namespace"}
-      metricsQuery: 'sum(irate(<<.Series>>{<<.LabelMatchers>>}[2m])) by (<<.GroupBy>>)'
-    - seriesQuery: 'nginx_ingress_controller_requests{ingress!="",exported_namespace!=""}'
-      resources:
-        overrides:
-          exported_namespace: {resource: "namespace"}
+          namespace: {resource: "namespace"}
           ingress: {resource: "ingress"}
       name:
         matches: "^(.*)_controller_requests"

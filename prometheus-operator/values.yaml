@@ -1,7 +1,7 @@
 grafanaIngress:
   appName: prometheus-operator-grafana
   namespaces: default
-  enabled: true
+  enabled: false
   annotations:
     kubernetes.io/ingress.class: "nginx"
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
